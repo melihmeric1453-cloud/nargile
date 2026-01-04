@@ -1,75 +1,66 @@
 import React from 'react';
-import { CheckCircle, Star } from 'lucide-react';
-import { whyUsReasons, businessInfo } from '../data/mock';
+import { Star } from 'lucide-react';
+import { businessInfo } from '../data/mock';
 
 const WhyUsSection = () => {
-  return (
-    <section id="neden-biz" className="bg-black py-24 lg:py-32 relative">
-      {/* Subtle top border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+  const reasons = [
+    "Yüksek müşteri memnuniyeti",
+    "İstikrarlı kalite ve sunum",
+    "Konya'da güvenilir tercih",
+    "Samimi ve konforlu atmosfer"
+  ];
 
-      <div className="max-w-7xl mx-auto px-5 md:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-          {/* Left - Content */}
+  return (
+    <section id="neden-biz" className="bg-[#0a0a0a] py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Content */}
           <div>
-            <span className="text-[#00FFD1] text-sm font-medium tracking-wider uppercase mb-4 block">
+            <p className="text-[#00FFD1] text-sm tracking-[0.2em] uppercase mb-4">
+              Neden Biz
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-light text-white mb-8">
               Farkımız
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-[1.1] mb-8">
-              Neden Mac Lounge?
             </h2>
-            <p className="text-lg text-white/70 mb-10">
-              Konya Selçuklu'da kaliteli nargile arayan binlerce kişinin tercihi.
+            
+            <p className="text-white/70 font-light leading-relaxed mb-10">
+              Konya Selçuklu'da kaliteli nargile arayan binlerce kişinin tercihi. 
+              Google değerlendirmelerimiz kalitemizin kanıtı.
             </p>
 
             {/* Reasons List */}
-            <div className="space-y-6">
-              {whyUsReasons.map((reason) => (
-                <div key={reason.id} className="flex gap-4">
-                  <div className="flex-shrink-0 w-6 h-6 mt-1">
-                    <CheckCircle size={24} className="text-[#00FFD1]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">
-                      {reason.title}
-                    </h3>
-                    <p className="text-white/60">
-                      {reason.description}
-                    </p>
-                  </div>
-                </div>
+            <ul className="space-y-4">
+              {reasons.map((reason, index) => (
+                <li key={index} className="flex items-center gap-4 text-white/80">
+                  <span className="w-1.5 h-1.5 bg-[#00FFD1]"></span>
+                  {reason}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* Right - Stats Card */}
-          <div className="flex items-center justify-center">
-            <div className="bg-[#121212] p-10 lg:p-12 w-full max-w-md">
-              <div className="text-center">
-                {/* Rating */}
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={32}
-                      className={i < Math.floor(businessInfo.rating.score) ? 'text-[#00FFD1] fill-[#00FFD1]' : 'text-white/20'}
-                    />
-                  ))}
-                </div>
-                <div className="text-6xl font-bold text-white mb-2">
-                  {businessInfo.rating.score}
-                </div>
-                <p className="text-white/60 text-lg mb-6">
-                  Google Puanı
+          {/* Rating Card */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="bg-black border border-white/10 p-12 text-center max-w-sm w-full">
+              <div className="flex justify-center gap-1 mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    size={20}
+                    className={i < Math.floor(businessInfo.rating.score) ? 'text-[#00FFD1] fill-[#00FFD1]' : 'text-white/20'}
+                  />
+                ))}
+              </div>
+              <p className="text-5xl font-light text-white mb-2">
+                {businessInfo.rating.score}
+              </p>
+              <p className="text-white/50 text-sm mb-8">Google Puanı</p>
+              
+              <div className="border-t border-white/10 pt-8">
+                <p className="text-3xl font-light text-[#00FFD1] mb-2">
+                  {businessInfo.rating.reviews}+
                 </p>
-                <div className="border-t border-white/10 pt-6">
-                  <div className="text-4xl font-bold text-[#00FFD1] mb-2">
-                    {businessInfo.rating.reviews}+
-                  </div>
-                  <p className="text-white/60">
-                    Gerçek Müşteri Yorumu
-                  </p>
-                </div>
+                <p className="text-white/50 text-sm">Müşteri Değerlendirmesi</p>
               </div>
             </div>
           </div>

@@ -1,58 +1,73 @@
 import React from 'react';
-import { Flame, Sparkles, Sofa, Users, Heart, MapPin } from 'lucide-react';
-import { services } from '../data/mock';
 
-const iconMap = {
-  Flame: Flame,
-  Sparkles: Sparkles,
-  Sofa: Sofa,
-  Users: Users,
-  Heart: Heart,
-  MapPin: MapPin
-};
+const services = [
+  {
+    title: "Premium Nargile",
+    description: "Yüksek kalite takımlar ve özenli hazırlık."
+  },
+  {
+    title: "Geniş Aroma Seçeneği",
+    description: "Klasiklerden özel karışımlara zengin yelpaze."
+  },
+  {
+    title: "Konforlu Ortam",
+    description: "Rahat oturma alanları ve huzurlu atmosfer."
+  },
+  {
+    title: "Profesyonel Hizmet",
+    description: "Deneyimli ve ilgili ekip."
+  }
+];
 
 const ServicesSection = () => {
   return (
-    <section id="hizmetler" className="bg-[#121212] py-24 lg:py-32 relative">
-      {/* Subtle borders */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-      <div className="max-w-7xl mx-auto px-5 md:px-8">
+    <section id="hizmetler" className="bg-[#0a0a0a] py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-[#00FFD1] text-sm font-medium tracking-wider uppercase mb-4 block">
+        <div className="max-w-xl mb-16">
+          <p className="text-[#00FFD1] text-sm tracking-[0.2em] uppercase mb-4">
             Hizmetlerimiz
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-[1.1] mb-6">
-            Neler Sunuyoruz?
-          </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Kaliteli nargile deneyimi için ihtiyacınız olan her şey Mac Lounge'da.
           </p>
+          <h2 className="text-3xl lg:text-4xl font-light text-white">
+            Size Sunduklarımız
+          </h2>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => {
-            const IconComponent = iconMap[service.icon];
-            return (
-              <div
-                key={service.id}
-                className="bg-black p-8 group hover:bg-[rgba(0,255,209,0.05)] transition-all duration-400 border border-transparent hover:border-[#00FFD1]/20"
-              >
-                <div className="w-12 h-12 bg-[#00FFD1]/10 flex items-center justify-center mb-6 group-hover:bg-[#00FFD1]/20 transition-colors duration-400">
-                  {IconComponent && <IconComponent size={24} className="text-[#00FFD1]" />}
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Services List */}
+          <div className="space-y-8">
+            {services.map((service, index) => (
+              <div key={index} className="group">
+                <div className="flex items-start gap-6">
+                  <span className="text-[#00FFD1]/40 text-sm font-light">
+                    0{index + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-xl text-white font-medium mb-2 group-hover:text-[#00FFD1] transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-white/50 font-light">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-white/60 leading-relaxed">
-                  {service.description}
-                </p>
+                {index < services.length - 1 && (
+                  <div className="border-b border-white/10 mt-8" />
+                )}
               </div>
-            );
-          })}
+            ))}
+          </div>
+
+          {/* Image */}
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1574751749605-0f1e41b6cf67?w=800&q=80"
+              alt="Nargile Detay"
+              className="w-full aspect-square object-cover"
+            />
+            <div className="absolute inset-0 border border-[#00FFD1]/20" />
+          </div>
         </div>
       </div>
     </section>
