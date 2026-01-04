@@ -105,7 +105,7 @@ const ContactSection = () => {
           {/* Google Map */}
           <div className="bg-black p-2 h-[400px] lg:h-auto">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.0!2d32.45!3d37.88!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDUyJzQ4LjAiTiAzMsKwMjcnMDAuMCJF!5e0!3m2!1str!2str!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.5!2d32.4544!3d37.8791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d0851e1c0e4f53%3A0x8d2e6f9b0a0c0d0e!2sSancak%2C%20Veysel%20Karani%20Cd.%20No%3A18%2C%2042250%20Sel%C3%A7uklu%2FKonya!5e0!3m2!1str!2str!4v1704000000000"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '380px' }}
