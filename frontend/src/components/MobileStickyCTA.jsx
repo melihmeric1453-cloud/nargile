@@ -7,25 +7,22 @@ const MobileStickyCTA = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
-      {/* Gradient overlay for smooth blend */}
-      <div className="h-6 bg-gradient-to-t from-black to-transparent" />
-      
-      <div className="bg-black/95 backdrop-blur-md border-t border-white/10 px-4 py-3 safe-area-pb">
+      <div className="bg-black border-t border-white/10 px-4 py-3 safe-area-pb">
         <div className="flex gap-3">
           <a
             href={`tel:${businessInfo.phone}`}
-            className="flex-1 bg-[#00FFD1] text-black py-4 text-base font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-transform duration-200"
+            className="flex-1 bg-[#00FFD1] text-black py-3.5 text-sm font-medium tracking-wide uppercase flex items-center justify-center gap-2"
           >
-            <Phone size={20} />
-            Hemen Ara
+            <Phone size={16} />
+            Ara
           </a>
           <a
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 bg-[#25D366] text-white py-4 text-base font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-transform duration-200"
+            className="flex-1 border border-white/30 text-white py-3.5 text-sm font-medium tracking-wide uppercase flex items-center justify-center gap-2"
           >
-            <MessageCircle size={20} />
+            <MessageCircle size={16} />
             WhatsApp
           </a>
         </div>
