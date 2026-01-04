@@ -1,11 +1,1027 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Site Çalışıyor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mac Lounge & Shop - Selçuklu Konya'da kaliteli nargile salonu. Premium nargile sunumu, geniş aroma seçenekleri ve konforlu lounge ortamı. Google'da 4.8 puan, 408 yorum. Her gün açık.">
+    <meta name="keywords" content="Selçuklu nargile, Konya nargile salonu, Kaliteli nargile Selçuklu, nargile cafe Konya, Mac Lounge, nargile lounge">
+    <meta name="author" content="Mac Lounge & Shop">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mac Lounge & Shop | Selçuklu'da Kaliteli Nargilenin Adresi">
+    <meta property="og:description" content="Konya Selçuklu'da premium nargile deneyimi. Kaliteli takımlar, geniş aroma seçenekleri, samimi atmosfer. 4.8 Google puanı.">
+    <meta property="og:locale" content="tr_TR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mac Lounge & Shop | Selçuklu Konya Nargile Salonu">
+    <meta name="twitter:description" content="Selçuklu'da kaliteli nargilenin adresi. Premium nargile, geniş aroma seçenekleri, konforlu ortam.">
+    <title>Mac Lounge & Shop | Selçuklu'da Kaliteli Nargilenin Adresi - Konya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Mac Lounge & Shop",
+        "description": "Konya Selçuklu'da kaliteli nargile salonu",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sancak, Veysel Karani Cd. No:18",
+            "addressLocality": "Selçuklu",
+            "addressRegion": "Konya",
+            "postalCode": "42250",
+            "addressCountry": "TR"
+        },
+        "telephone": "+90 541 675 31 90",
+        "priceRange": "₺200-600",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "408"
+        },
+        "openingHours": "Mo-Su 00:00-01:30"
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s, background 0.3s;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            letter-spacing: 0.02em;
+        }
+
+        .logo span:first-child {
+            font-weight: 300;
+        }
+
+        .logo span:last-child {
+            font-weight: 600;
+        }
+
+        nav {
+            display: none;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.875rem;
+            margin-left: 32px;
+        }
+
+        nav a:hover {
+            color: #00FFD1;
+        }
+
+        .header-phone {
+            color: #00FFD1;
+            font-size: 0.875rem;
+            display: none;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, #000, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 120px 0 80px;
+            max-width: 600px;
+        }
+
+        .hero-location {
+            color: #00FFD1;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 strong {
+            display: block;
+            font-weight: 600;
+        }
+
+        .hero-desc {
+            color: rgba(255,255,255,0.7);
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .hero-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 32px;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .stars {
+            color: #00FFD1;
+            letter-spacing: 2px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #00FFD1;
+            color: #000;
+            padding: 16px 32px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .btn-primary:hover {
+            background: #fff;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: transparent;
+            color: #fff;
+            padding: 16px 32px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .hero-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.8);
+        }
+
+        .hero-bottom-inner {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 24px;
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-label {
+            color: #00FFD1;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 24px;
+        }
+
+        .section-title strong {
+            display: block;
+            font-weight: 600;
+        }
+
+        /* About */
+        .about {
+            background: #000;
+        }
+
+        .about-grid {
+            display: grid;
+            gap: 48px;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(0,255,209,0.2);
+            pointer-events: none;
+        }
+
+        .about-text {
+            color: rgba(255,255,255,0.7);
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-value {
+            font-size: 1.75rem;
+            font-weight: 300;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 4px;
+        }
+
+        /* Services */
+        .services {
+            background: #0a0a0a;
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 48px;
+            margin-top: 48px;
+        }
+
+        .service-item {
+            display: flex;
+            gap: 20px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .service-num {
+            color: rgba(0,255,209,0.4);
+            font-size: 0.875rem;
+        }
+
+        .service-title {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .service-desc {
+            color: rgba(255,255,255,0.5);
+            font-weight: 300;
+            font-size: 0.9375rem;
+        }
+
+        .services-image img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        /* Gallery */
+        .gallery {
+            background: #000;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+        }
+
+        .gallery-item:first-child {
+            grid-column: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Why Us */
+        .why-us {
+            background: #0a0a0a;
+        }
+
+        .why-grid {
+            display: grid;
+            gap: 48px;
+        }
+
+        .why-text {
+            color: rgba(255,255,255,0.7);
+            font-weight: 300;
+            margin-bottom: 32px;
+        }
+
+        .why-list {
+            list-style: none;
+        }
+
+        .why-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 12px;
+        }
+
+        .why-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #00FFD1;
+            flex-shrink: 0;
+        }
+
+        .rating-card {
+            background: #000;
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 48px 32px;
+            text-align: center;
+        }
+
+        .rating-stars {
+            color: #00FFD1;
+            font-size: 1.25rem;
+            letter-spacing: 4px;
+            margin-bottom: 16px;
+        }
+
+        .rating-value {
+            font-size: 3rem;
+            font-weight: 300;
+        }
+
+        .rating-label {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.875rem;
+            margin-bottom: 32px;
+        }
+
+        .rating-reviews {
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .rating-reviews-value {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #00FFD1;
+        }
+
+        .rating-reviews-label {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.875rem;
+            margin-top: 4px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #000;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 32px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: border-color 0.3s;
+        }
+
+        .contact-item:hover {
+            border-color: rgba(0,255,209,0.3);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #00FFD1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #00FFD1;
+            font-size: 1.25rem;
+        }
+
+        .contact-label {
+            font-size: 0.625rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            font-size: 1.125rem;
+        }
+
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .map-container {
+            height: 300px;
+            margin-top: 32px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(1);
+            transition: filter 0.3s;
+        }
+
+        .map-container:hover iframe {
+            filter: grayscale(0);
+        }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 60px 0 100px;
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 40px;
+        }
+
+        .footer-brand {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-desc {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.875rem;
+            font-weight: 300;
+        }
+
+        .footer-title {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.875rem;
+        }
+
+        .footer-links a:hover {
+            color: #00FFD1;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* Mobile CTA */
+        .mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(0,0,0,0.95);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 12px 16px;
+            padding-bottom: max(12px, env(safe-area-inset-bottom));
+        }
+
+        .mobile-cta-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .mobile-cta a {
+            padding: 14px 16px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        .mobile-cta .btn-primary {
+            background: #00FFD1;
+            color: #000;
+        }
+
+        .mobile-cta .btn-secondary {
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 64px;
+                align-items: center;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 64px;
+                align-items: center;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 1;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 64px;
+                align-items: center;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            section {
+                padding: 120px 0;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            nav {
+                display: flex;
+            }
+
+            .header-phone {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .menu-btn {
+                display: none;
+            }
+
+            .mobile-cta {
+                display: none;
+            }
+
+            footer {
+                padding-bottom: 60px;
+            }
+
+            .hero h1 {
+                font-size: 4rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Site çalışıyor 🎉</h1>
-  <p>GitHub Pages doğru ayarlandı.</p>
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#anasayfa" class="logo">
+                <span>Mac</span><span> Lounge</span>
+            </a>
+            <nav>
+                <a href="#anasayfa">Ana Sayfa</a>
+                <a href="#hakkimizda">Hakkımızda</a>
+                <a href="#hizmetler">Hizmetler</a>
+                <a href="#neden-biz">Neden Biz</a>
+                <a href="#iletisim">İletişim</a>
+            </nav>
+            <a href="tel:+905416753190" class="header-phone">
+                📞 +90 541 675 31 90
+            </a>
+            <button class="menu-btn" onclick="alert('Menü: Ana Sayfa | Hakkımızda | Hizmetler | Neden Biz | İletişim')">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="anasayfa">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1635547821500-77542481940c?w=1920&q=80" alt="Mac Lounge Atmosfer">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <p class="hero-location">Selçuklu / Konya</p>
+            <h1>Kaliteli Nargilenin<strong>Adresi</strong></h1>
+            <p class="hero-desc">Premium nargile deneyimi, özenli sunum ve samimi atmosfer.</p>
+            <div class="hero-rating">
+                <span class="stars">★★★★★</span>
+                <span>4.8 · 408 değerlendirme</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="tel:+905416753190" class="btn-primary">📞 Rezervasyon</a>
+                <a href="https://wa.me/905416753190?text=Merhaba, bilgi almak istiyorum." target="_blank" class="btn-secondary">💬 WhatsApp</a>
+            </div>
+        </div>
+        <div class="hero-bottom">
+            <div class="hero-bottom-inner">
+                <span>Her gün açık · Kapanış: 01:30</span>
+                <span>Kişi başı: ₺200-600</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="hakkimizda">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1574238752695-675b86d49267?w=800&q=80" alt="Premium Nargile">
+                </div>
+                <div class="about-content">
+                    <p class="section-label">Hakkımızda</p>
+                    <h2 class="section-title">Kalite ve Konforun<strong>Buluştuğu Nokta</strong></h2>
+                    <p class="about-text">Mac Lounge, Konya Selçuklu'da premium nargile deneyimi sunan seçkin bir mekândır. Kaliteli takımlarımız ve geniş aroma yelpazemizle her ziyaretinizi özel kılıyoruz.</p>
+                    <p class="about-text">Deneyimli ekibimiz, konforlu ortamımız ve özenli hizmet anlayışımızla misafirlerimize unutulmaz anlar yaşatmayı hedefliyoruz.</p>
+                    <div class="about-stats">
+                        <div>
+                            <p class="stat-value">4.8</p>
+                            <p class="stat-label">Google Puanı</p>
+                        </div>
+                        <div>
+                            <p class="stat-value">408+</p>
+                            <p class="stat-label">Değerlendirme</p>
+                        </div>
+                        <div>
+                            <p class="stat-value">01:30</p>
+                            <p class="stat-label">Kapanış</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="hizmetler">
+        <div class="container">
+            <p class="section-label">Hizmetlerimiz</p>
+            <h2 class="section-title">Size Sunduklarımız</h2>
+            <div class="services-grid">
+                <div class="services-list">
+                    <div class="service-item">
+                        <span class="service-num">01</span>
+                        <div>
+                            <h3 class="service-title">Premium Nargile</h3>
+                            <p class="service-desc">Yüksek kalite takımlar ve özenli hazırlık.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-num">02</span>
+                        <div>
+                            <h3 class="service-title">Geniş Aroma Seçeneği</h3>
+                            <p class="service-desc">Klasiklerden özel karışımlara zengin yelpaze.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-num">03</span>
+                        <div>
+                            <h3 class="service-title">Konforlu Ortam</h3>
+                            <p class="service-desc">Rahat oturma alanları ve huzurlu atmosfer.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-num">04</span>
+                        <div>
+                            <h3 class="service-title">Profesyonel Hizmet</h3>
+                            <p class="service-desc">Deneyimli ve ilgili ekip.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-image">
+                    <img src="https://images.unsplash.com/photo-1574751749605-0f1e41b6cf67?w=800&q=80" alt="Nargile Detay">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <p class="section-label">Galeri</p>
+                <h2 class="section-title">Mekânımızdan Kareler</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1635547821500-77542481940c?w=600&q=80" alt="Atmosferik Nargile">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1574238752695-675b86d49267?w=600&q=80" alt="Premium Takım">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1574751749605-0f1e41b6cf67?w=600&q=80" alt="Nargile Detay">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us" id="neden-biz">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-content">
+                    <p class="section-label">Neden Biz</p>
+                    <h2 class="section-title">Farkımız</h2>
+                    <p class="why-text">Konya Selçuklu'da kaliteli nargile arayan binlerce kişinin tercihi. Google değerlendirmelerimiz kalitemizin kanıtı.</p>
+                    <ul class="why-list">
+                        <li>Yüksek müşteri memnuniyeti</li>
+                        <li>İstikrarlı kalite ve sunum</li>
+                        <li>Konya'da güvenilir tercih</li>
+                        <li>Samimi ve konforlu atmosfer</li>
+                    </ul>
+                </div>
+                <div class="rating-card">
+                    <p class="rating-stars">★★★★★</p>
+                    <p class="rating-value">4.8</p>
+                    <p class="rating-label">Google Puanı</p>
+                    <div class="rating-reviews">
+                        <p class="rating-reviews-value">408+</p>
+                        <p class="rating-reviews-label">Müşteri Değerlendirmesi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="iletisim">
+        <div class="container">
+            <div class="contact-header">
+                <p class="section-label">İletişim</p>
+                <h2 class="section-title">Bize Ulaşın</h2>
+            </div>
+            <div class="contact-grid">
+                <div>
+                    <a href="tel:+905416753190" class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <p class="contact-label">Telefon</p>
+                            <p class="contact-value">+90 541 675 31 90</p>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/905416753190?text=Merhaba, bilgi almak istiyorum." target="_blank" class="contact-item" style="margin-top: 16px;">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <p class="contact-label">WhatsApp</p>
+                            <p class="contact-value">Mesaj Gönder</p>
+                        </div>
+                    </a>
+                    <div class="contact-item" style="margin-top: 16px;">
+                        <div class="contact-icon" style="border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);">📍</div>
+                        <div>
+                            <p class="contact-label">Adres</p>
+                            <p class="contact-value" style="font-size: 1rem; color: rgba(255,255,255,0.8);">Sancak, Veysel Karani Cd. No:18, 42250 Selçuklu/Konya</p>
+                        </div>
+                    </div>
+                    <div class="contact-item" style="margin-top: 16px;">
+                        <div class="contact-icon" style="border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);">🕐</div>
+                        <div>
+                            <p class="contact-label">Çalışma Saatleri</p>
+                            <p class="contact-value" style="font-size: 1rem; color: rgba(255,255,255,0.8);">Her gün açık · Kapanış: 01:30</p>
+                        </div>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sancak,+Veysel+Karani+Cd.+No:18,+42250+Selçuklu/Konya" target="_blank" class="btn-secondary">📍 Yol Tarifi</a>
+                        <a href="tel:+905416753190" class="btn-primary">📞 Hemen Ara</a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.5!2d32.4544!3d37.8791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d0851e1c0e4f53%3A0x8d2e6f9b0a0c0d0e!2sSancak%2C%20Veysel%20Karani%20Cd.%20No%3A18%2C%2042250%20Sel%C3%A7uklu%2FKonya!5e0!3m2!1str!2str!4v1704000000000" allowfullscreen="" loading="lazy" title="Mac Lounge Konum"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <p class="footer-brand"><span style="font-weight:300">Mac</span><span style="font-weight:600"> Lounge</span></p>
+                    <p class="footer-desc">Selçuklu'da premium nargile deneyimi.</p>
+                </div>
+                <div>
+                    <p class="footer-title">İletişim</p>
+                    <ul class="footer-links">
+                        <li><a href="tel:+905416753190">📞 +90 541 675 31 90</a></li>
+                        <li><a href="https://instagram.com" target="_blank">📷 Instagram</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer-title">Çalışma Saatleri</p>
+                    <ul class="footer-links">
+                        <li>Her gün açık</li>
+                        <li>Kapanış: 01:30</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 Mac Lounge & Shop</span>
+                <span>Selçuklu / Konya</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
+        <div class="mobile-cta-inner">
+            <a href="tel:+905416753190" class="btn-primary">📞 Ara</a>
+            <a href="https://wa.me/905416753190?text=Merhaba, bilgi almak istiyorum." target="_blank" class="btn-secondary">💬 WhatsApp</a>
+        </div>
+    </div>
 </body>
 </html>
